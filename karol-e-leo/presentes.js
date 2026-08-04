@@ -1,18 +1,4 @@
 /* ============================================================
-   CONFIGURAÇÕES DO CASAL — EDITE AQUI
-   ============================================================ */
-
-// EDITAR: prazo final para presentear (contagem regressiva).
-// Sugestão: defina para 30 dias após publicar o site.
-const DEADLINE_DATE = new Date("2026-09-03T23:59:59");
-
-// EDITAR: chave Pix real do casal (CPF, celular, e-mail ou chave aleatória)
-const PIX_KEY = "chave-pix-do-casal@exemplo.com";
-
-// EDITAR: nome que aparece para quem vai pagar (recebedor do Pix)
-const PIX_NOME_RECEBEDOR = "Karol e Léo";
-
-/* ============================================================
    LISTA DE PRESENTES — ilustrativos, valor de R$150 a R$1200
    Edite, remova ou adicione itens à vontade.
    ============================================================ */
@@ -56,42 +42,6 @@ GIFTS.forEach((gift, index) => {
   `;
   gridEl.appendChild(card);
 });
-
-/* ============================================================
-   CONTAGEM REGRESSIVA
-   ============================================================ */
-function updateCountdown() {
-  const now = new Date();
-  const diff = DEADLINE_DATE - now;
-
-  const els = {
-    dias: document.getElementById("cd-dias"),
-    horas: document.getElementById("cd-horas"),
-    min: document.getElementById("cd-min"),
-    seg: document.getElementById("cd-seg"),
-  };
-
-  if (diff <= 0) {
-    els.dias.textContent = "00";
-    els.horas.textContent = "00";
-    els.min.textContent = "00";
-    els.seg.textContent = "00";
-    return;
-  }
-
-  const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const min = Math.floor((diff / (1000 * 60)) % 60);
-  const seg = Math.floor((diff / 1000) % 60);
-
-  els.dias.textContent = String(dias).padStart(2, "0");
-  els.horas.textContent = String(horas).padStart(2, "0");
-  els.min.textContent = String(min).padStart(2, "0");
-  els.seg.textContent = String(seg).padStart(2, "0");
-}
-
-updateCountdown();
-setInterval(updateCountdown, 1000);
 
 /* ============================================================
    MODAL DE PRESENTE

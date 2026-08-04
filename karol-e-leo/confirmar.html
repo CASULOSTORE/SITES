@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmar presença | Karol & Léo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="site-nav site-nav--simple">
+    <a class="site-nav__brand" href="index.html">Karol <span>&amp;</span> Léo</a>
+    <a class="site-nav__back" href="index.html">← Início</a>
+  </nav>
+
+  <main class="rsvp">
+    <div class="rsvp__card">
+      <p class="section-eyebrow">Confirmação de presença</p>
+      <h1>Vai estar com a gente?</h1>
+      <p class="rsvp__lead">
+        Confirme até <strong>04 de agosto às 14h</strong> pra ajudar a
+        gente a fechar a mesa certinha no Brotto Restaurante.
+      </p>
+
+      <form id="rsvp-form" class="rsvp__form">
+        <label class="field">
+          Nome completo
+          <input type="text" id="rsvp-nome" required placeholder="Seu nome como no convite" />
+        </label>
+        <label class="field">
+          Mensagem para os noivos (opcional)
+          <textarea id="rsvp-mensagem" rows="3" placeholder="Deixe um recadinho, um conselho de casados ou uma piada 😄"></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary btn--block">Confirmar presença</button>
+      </form>
+
+      <div class="rsvp__obrigado" id="rsvp-obrigado" hidden>
+        <span class="rsvp__obrigado-emoji">🎉</span>
+        <h2>Prontinho, <span id="rsvp-nome-confirmado"></span>!</h2>
+        <p>Sua confirmação foi aberta no WhatsApp — é só enviar a mensagem pra gente. Mal podemos esperar!</p>
+        <a href="index.html" class="btn btn--ghost">Voltar ao início</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="index.html">Início</a>
+      <a href="presentes.html">Presentes</a>
+      <a href="confirmar.html">Confirmar presença</a>
+    </div>
+    <p>Com carinho, Karol &amp; Léo 💍</p>
+    <p class="footer__small">Feito com amor (e um pouquinho de código) para o nosso grande dia.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="rsvp.js"></script>
+</body>
+</html>

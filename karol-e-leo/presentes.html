@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Presentes | Karol & Léo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a class="site-nav__brand" href="index.html">Karol <span>&amp;</span> Léo</a>
+    <div class="site-nav__links">
+      <a href="index.html#historia">Nossa história</a>
+      <a href="index.html">Início</a>
+      <a href="confirmar.html" class="btn btn--nav">Confirmar presença</a>
+    </div>
+  </nav>
+
+  <!-- ===================== LISTA DE PRESENTES ===================== -->
+  <section id="presentes" class="gifts gifts--page">
+    <h2 class="gifts__title">Escolha um presente</h2>
+    <p class="gifts__subtitle">
+      São ilustrativos, viu? 100% do valor vai direto pra vida a dois via Pix. 🐷💸
+    </p>
+
+    <div class="gifts__grid" id="gifts-grid">
+      <!-- Os cards são renderizados via JS a partir da lista em presentes.js -->
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="index.html">Início</a>
+      <a href="presentes.html">Presentes</a>
+      <a href="confirmar.html">Confirmar presença</a>
+    </div>
+    <p>Com carinho, Karol &amp; Léo 💍</p>
+    <p class="footer__small">Feito com amor (e um pouquinho de código) para o nosso grande dia.</p>
+  </footer>
+
+  <!-- ===================== MODAL DE PRESENTE ===================== -->
+  <div class="modal" id="gift-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" data-close aria-label="Fechar">&times;</button>
+
+      <div class="modal__gift">
+        <span class="modal__emoji" id="modal-emoji">🎁</span>
+        <h3 id="modal-title">Nome do presente</h3>
+        <p id="modal-desc" class="modal__desc"></p>
+        <p class="modal__price" id="modal-price">R$ 0</p>
+      </div>
+
+      <div class="modal__step" id="step-form">
+        <label class="field">
+          Seu nome
+          <input type="text" id="input-nome" placeholder="Ex: Tia Marlene" />
+        </label>
+        <label class="field">
+          Mensagem para o casal (opcional)
+          <textarea id="input-mensagem" rows="2" placeholder="Deixe um recadinho fofo... ou engraçado 😄"></textarea>
+        </label>
+        <button class="btn btn--primary btn--block" id="btn-ir-pix">Presentear via Pix →</button>
+      </div>
+
+      <div class="modal__step modal__step--hidden" id="step-pix">
+        <p class="pix__intro">Chave Pix para pagamento:</p>
+
+        <div class="pix__qrcode">
+          <img id="pix-qr-img" src="" alt="QR Code Pix" />
+        </div>
+
+        <div class="pix__key-box">
+          <span id="pix-key-text"><!-- preenchido via JS --></span>
+          <button class="btn btn--small" id="btn-copiar-pix">Copiar</button>
+        </div>
+        <p class="pix__hint">
+          Abra o app do seu banco → Pix → Pix Copia e Cola (ou aponte a câmera para o QR Code).
+        </p>
+
+        <button class="btn btn--primary btn--block" id="btn-confirmar">Já presenteei! 🎉</button>
+        <button class="btn btn--link btn--block" id="btn-voltar">← voltar</button>
+      </div>
+
+      <div class="modal__step modal__step--hidden" id="step-obrigado">
+        <div class="obrigado">
+          <span class="obrigado__emoji">💖</span>
+          <h3>Muito obrigado, <span id="obrigado-nome">amigo(a)</span>!</h3>
+          <p>Seu carinho já está fazendo parte da nossa lua de mel (ou da festa de 10 anos de casados 😉).</p>
+          <button class="btn btn--primary btn--block" data-close>Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="presentes.js"></script>
+</body>
+</html>
