@@ -1,64 +1,63 @@
 :root {
-  /* Bordô (vinho) como cor de assinatura + dourado quente + verde-jade
-     como pop de alegria nos botões de ação — foge do combo clichê
-     "creme + terracota" e traz uma paleta mais festiva e brasileira. */
-  --wine: #7a2e3a;
-  --wine-dark: #5c2029;
-  --gold: #c9973f;
-  --jade: #2f6b57;
-  --jade-dark: #234f41;
-  --cream: #faf3ec;
-  --cream-dark: #f1e3d3;
-  --ink: #372623;
-  --ink-light: #7a6558;
-  --white: #fffdfb;
+  /* Paleta clean: azul claro + verde + rosa sobre branco — suave,
+     sem cores fortes, com cada tom cumprindo um papel só seu. */
+  --sky: #5f9bc7;      /* títulos e destaques */
+  --sky-dark: #3f7aa8; /* texto sobre fundo claro / hover de contorno */
+  --blush: #e0879e;    /* preços e detalhes afetivos */
+  --mint: #4fae8a;     /* botões de ação (Presentear) */
+  --mint-dark: #3c8b6d;
+  --paper: #ffffff;
+  --paper-dark: #eef5f8;
+  --ink: #38434c;
+  --ink-light: #7c8791;
+  --white: #ffffff;
   --radius: 18px;
-  --shadow: 0 10px 30px rgba(55, 38, 35, 0.12);
+  --shadow: 0 10px 30px rgba(56, 67, 76, 0.1);
   font-size: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --cream: #241a1c;
-    --cream-dark: #2e2123;
-    --ink: #f3e9e3;
-    --ink-light: #cbb7ae;
-    --white: #2b1f21;
-    --wine: #e08a97;
-    --wine-dark: #f0aab3;
-    --gold: #e0b565;
-    --jade: #5fbb9d;
-    --jade-dark: #7cd1b4;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    --paper: #141b20;
+    --paper-dark: #1b242a;
+    --ink: #eef3f6;
+    --ink-light: #a7b3bc;
+    --white: #1e282e;
+    --sky: #8dc3ea;
+    --sky-dark: #a9d3f0;
+    --blush: #f0a6b8;
+    --mint: #6fd0ac;
+    --mint-dark: #8adcc0;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   }
 }
 
 :root[data-theme="dark"] {
-  --cream: #241a1c;
-  --cream-dark: #2e2123;
-  --ink: #f3e9e3;
-  --ink-light: #cbb7ae;
-  --white: #2b1f21;
-  --wine: #e08a97;
-  --wine-dark: #f0aab3;
-  --gold: #e0b565;
-  --jade: #5fbb9d;
-  --jade-dark: #7cd1b4;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --paper: #141b20;
+  --paper-dark: #1b242a;
+  --ink: #eef3f6;
+  --ink-light: #a7b3bc;
+  --white: #1e282e;
+  --sky: #8dc3ea;
+  --sky-dark: #a9d3f0;
+  --blush: #f0a6b8;
+  --mint: #6fd0ac;
+  --mint-dark: #8adcc0;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 :root[data-theme="light"] {
-  --cream: #faf3ec;
-  --cream-dark: #f1e3d3;
-  --ink: #372623;
-  --ink-light: #7a6558;
-  --white: #fffdfb;
-  --wine: #7a2e3a;
-  --wine-dark: #5c2029;
-  --gold: #c9973f;
-  --jade: #2f6b57;
-  --jade-dark: #234f41;
-  --shadow: 0 10px 30px rgba(55, 38, 35, 0.12);
+  --paper: #ffffff;
+  --paper-dark: #eef5f8;
+  --ink: #38434c;
+  --ink-light: #7c8791;
+  --white: #ffffff;
+  --sky: #5f9bc7;
+  --sky-dark: #3f7aa8;
+  --blush: #e0879e;
+  --mint: #4fae8a;
+  --mint-dark: #3c8b6d;
+  --shadow: 0 10px 30px rgba(56, 67, 76, 0.1);
 }
 
 * { box-sizing: border-box; }
@@ -67,7 +66,7 @@ body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   color: var(--ink);
-  background: var(--cream);
+  background: var(--paper);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -87,9 +86,9 @@ p { line-height: 1.6; }
   text-align: center;
   padding: 32px 20px;
   background:
-    radial-gradient(circle at 20% 20%, rgba(217,138,148,0.25), transparent 45%),
-    radial-gradient(circle at 80% 80%, rgba(201,161,90,0.25), transparent 45%),
-    linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 100%);
+    radial-gradient(circle at 20% 20%, rgba(95,155,199,0.16), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(224,135,158,0.16), transparent 45%),
+    linear-gradient(160deg, var(--paper) 0%, var(--paper-dark) 100%);
 }
 
 .hero__overlay {
@@ -104,18 +103,18 @@ p { line-height: 1.6; }
   letter-spacing: 0.25em;
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: var(--gold);
+  color: var(--blush);
   font-weight: 600;
   margin: 0;
 }
 
 .hero__names {
   font-size: clamp(2.8rem, 8vw, 5rem);
-  color: var(--wine-dark);
+  color: var(--sky-dark);
 }
 
 .hero__amp {
-  color: var(--gold);
+  color: var(--blush);
   font-style: italic;
   font-weight: 400;
 }
@@ -126,10 +125,18 @@ p { line-height: 1.6; }
   margin: 0;
 }
 
+.countdown__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-light);
+  margin: 6px 0 0;
+}
+
 .countdown {
   display: flex;
   gap: 12px;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .countdown__box {
@@ -146,7 +153,7 @@ p { line-height: 1.6; }
 .countdown__box span {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--wine-dark);
+  color: var(--sky-dark);
   font-family: 'Playfair Display', serif;
 }
 
@@ -176,23 +183,23 @@ p { line-height: 1.6; }
 .btn--ghost {
   margin-top: 10px;
   background: transparent;
-  color: var(--wine-dark);
-  border: 2px solid var(--wine-dark);
+  color: var(--sky-dark);
+  border: 2px solid var(--sky-dark);
 }
 
-.btn--ghost:hover { background: var(--wine-dark); color: var(--white); }
+.btn--ghost:hover { background: var(--sky-dark); color: var(--white); }
 
 .btn--primary {
-  background: var(--jade);
+  background: var(--mint);
   color: var(--white);
   width: 100%;
-  box-shadow: 0 6px 16px rgba(47, 107, 87, 0.35);
+  box-shadow: 0 6px 16px rgba(79, 174, 138, 0.35);
 }
 
-.btn--primary:hover { background: var(--jade-dark); }
+.btn--primary:hover { background: var(--mint-dark); }
 
 .btn--small {
-  background: var(--gold);
+  background: var(--blush);
   color: var(--white);
   padding: 8px 16px;
   font-size: 0.8rem;
@@ -220,7 +227,7 @@ p { line-height: 1.6; }
 }
 
 .story__content h2 {
-  color: var(--wine-dark);
+  color: var(--sky-dark);
   font-size: 2rem;
   margin-bottom: 20px;
 }
@@ -228,6 +235,46 @@ p { line-height: 1.6; }
 .story__content p {
   color: var(--ink-light);
   font-size: 1.05rem;
+}
+
+/* ===================== FOTOS ===================== */
+.photos {
+  padding: 0 20px 70px;
+  display: flex;
+  justify-content: center;
+  background: var(--white);
+}
+
+.photos__row {
+  display: flex;
+  gap: 18px;
+  max-width: 640px;
+  width: 100%;
+}
+
+.photos__frame {
+  flex: 1;
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  background: var(--paper-dark);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.photos__frame--mid {
+  flex: 1.15;
+}
+
+.photos__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .photos__row { gap: 10px; }
 }
 
 /* ===================== GIFTS ===================== */
@@ -239,7 +286,7 @@ p { line-height: 1.6; }
 
 .gifts__title {
   text-align: center;
-  color: var(--wine-dark);
+  color: var(--sky-dark);
   font-size: 2.2rem;
 }
 
@@ -272,7 +319,7 @@ p { line-height: 1.6; }
 
 .gift-card:hover {
   transform: translateY(-6px);
-  border-color: var(--wine);
+  border-color: var(--sky);
 }
 
 .gift-card__emoji {
@@ -297,14 +344,14 @@ p { line-height: 1.6; }
 
 .gift-card__price {
   font-weight: 700;
-  color: var(--gold);
+  color: var(--blush);
   font-size: 1.15rem;
   margin-top: 4px;
 }
 
 .gift-card__btn {
   margin-top: 8px;
-  background: var(--jade);
+  background: var(--mint);
   color: var(--white);
   border: none;
   border-radius: 999px;
@@ -315,14 +362,14 @@ p { line-height: 1.6; }
   transition: background 0.15s ease;
 }
 
-.gift-card__btn:hover { background: var(--jade-dark); }
+.gift-card__btn:hover { background: var(--mint-dark); }
 
 /* ===================== FOOTER ===================== */
 .footer {
   text-align: center;
   padding: 40px 20px 60px;
   color: var(--ink-light);
-  background: var(--cream-dark);
+  background: var(--paper-dark);
 }
 
 .footer p { margin: 4px 0; }
@@ -386,7 +433,7 @@ p { line-height: 1.6; }
 }
 
 .modal__price {
-  color: var(--gold);
+  color: var(--blush);
   font-weight: 700;
   font-size: 1.4rem;
   margin-top: 8px;
@@ -406,7 +453,7 @@ p { line-height: 1.6; }
 
 .field input, .field textarea {
   font-family: 'Poppins', sans-serif;
-  border: 1.5px solid var(--cream-dark);
+  border: 1.5px solid var(--paper-dark);
   border-radius: 10px;
   padding: 10px 12px;
   font-size: 0.95rem;
@@ -416,7 +463,7 @@ p { line-height: 1.6; }
 
 .field input:focus, .field textarea:focus {
   outline: none;
-  border-color: var(--wine);
+  border-color: var(--sky);
 }
 
 .pix__intro {
@@ -435,7 +482,7 @@ p { line-height: 1.6; }
   width: 200px;
   height: 200px;
   border-radius: 12px;
-  border: 1px solid var(--cream-dark);
+  border: 1px solid var(--paper-dark);
 }
 
 .pix__key-box {
@@ -443,7 +490,7 @@ p { line-height: 1.6; }
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  background: var(--cream);
+  background: var(--paper);
   border-radius: 12px;
   padding: 10px 14px;
 }
@@ -480,7 +527,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--blush);
   outline-offset: 2px;
 }
 

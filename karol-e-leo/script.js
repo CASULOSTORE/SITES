@@ -2,8 +2,9 @@
    CONFIGURAÇÕES DO CASAL — EDITE AQUI
    ============================================================ */
 
-// EDITAR: data e hora do casamento (usada na contagem regressiva)
-const WEDDING_DATE = new Date("2026-12-12T17:00:00");
+// EDITAR: prazo final para presentear (contagem regressiva).
+// Sugestão: defina para 30 dias após publicar o site.
+const DEADLINE_DATE = new Date("2026-09-03T23:59:59");
 
 // EDITAR: chave Pix real do casal (CPF, celular, e-mail ou chave aleatória)
 const PIX_KEY = "chave-pix-do-casal@exemplo.com";
@@ -16,22 +17,22 @@ const PIX_NOME_RECEBEDOR = "Karol e Léo";
    Edite, remova ou adicione itens à vontade.
    ============================================================ */
 const GIFTS = [
-  { emoji: "🍕", nome: "Pizza da paz", desc: "Pra ninguém brigar de estômago vazio nos primeiros meses de casados.", preco: 150 },
-  { emoji: "😅", nome: "Vale-desculpa do Léo", desc: "Um vale-presente emocional para usar depois de uma bobagem qualquer.", preco: 170 },
-  { emoji: "🎯", nome: "Kit 'eu tô certo(a)'", desc: "Para vencer qualquer discussão boba sem precisar de argumento.", preco: 200 },
-  { emoji: "☕", nome: "Café na cama vitalício", desc: "Bom dia todo dia, sem sair do edredom.", preco: 230 },
-  { emoji: "🍳", nome: "Panela anti-desculpa", desc: "Pra Karol nunca mais dizer 'não tenho panela pra isso'.", preco: 260 },
-  { emoji: "🛋️", nome: "Terapia de casal preventiva", desc: "Uma sessão pra resolver a discussão sobre tampa de vaso aberta ou fechada.", preco: 300 },
-  { emoji: "🍖", nome: "Rodízio pra aguentar a família", desc: "Energia extra pros almoços de domingo com a sogra.", preco: 340 },
-  { emoji: "💃", nome: "Aula de dança do casal", desc: "Pra não pisar no pé um do outro na valsa (nem na vida).", preco: 380 },
-  { emoji: "🧦", nome: "Kit meias sem par", desc: "Porque em todo casamento uma meia sempre desaparece.", preco: 400 },
-  { emoji: "📺", nome: "Maratona eterna", desc: "Pra assistir série deitados sem brigar pelo controle remoto.", preco: 450 },
-  { emoji: "🍽️", nome: "Paz doméstica automática", desc: "Ajuda a acabar com a eterna discussão de quem lava a louça.", preco: 550 },
-  { emoji: "💆‍♀️", nome: "SPA anti-Léo", desc: "Um dia de relaxamento pra Karol recarregar as energias.", preco: 650 },
-  { emoji: "🥩", nome: "Churrasco de inauguração", desc: "Pra estrear a casa nova recebendo todo mundo com churrasco.", preco: 750 },
+  { emoji: "💍", nome: "Polimento da aliança", desc: "Pra ela brilhar tanto quanto o sorriso dos dois na hora do sim.", preco: 150 },
+  { emoji: "😅", nome: "Vale-desculpa do Léo", desc: "Um vale-presente emocional pra usar depois de uma bobagem qualquer.", preco: 170 },
+  { emoji: "🎯", nome: "Kit 'eu tô certo(a)'", desc: "Pra vencer qualquer discussão boba de casal sem precisar de argumento.", preco: 200 },
+  { emoji: "💐", nome: "Buquê que não murcha", desc: "Pra Karol jogar pra galera solteira sem gastar flor de verdade.", preco: 230 },
+  { emoji: "✍️", nome: "Assinatura do sobrenome novo", desc: "Treino de caligrafia pra não errar bonito na hora H.", preco: 260 },
+  { emoji: "💌", nome: "Cápsula do tempo do casal", desc: "Uma carta escrita hoje pra ler daqui a 10 anos de casados.", preco: 300 },
+  { emoji: "🕺", nome: "Aula da primeira dança", desc: "Pra não pisar no pé um do outro na hora H.", preco: 340 },
+  { emoji: "🥂", nome: "Brinde ao 'sim'", desc: "Uma taça de espumante pra comemorar o começo de tudo.", preco: 380 },
+  { emoji: "🎻", nome: "Trilha sonora do grande dia", desc: "Uma ajuda pra deixar o momento ainda mais bonito de ouvir.", preco: 420 },
+  { emoji: "🧠", nome: "Terapia de casal preventiva", desc: "Uma sessão pra já entrarem no casamento afiados em diplomacia.", preco: 470 },
+  { emoji: "💆‍♀️", nome: "SPA anti-Léo", desc: "Um dia de relaxamento pra Karol recarregar as energias.", preco: 560 },
+  { emoji: "🥩", nome: "Churrasco de recém-casados", desc: "Pra comemorar com os amigos o novo capítulo da dupla.", preco: 650 },
+  { emoji: "🍰", nome: "Bolo extra pra comer até enjoar", desc: "Porque um bolo de casamento nunca é suficiente.", preco: 780 },
   { emoji: "🏖️", nome: "Mini lua de mel", desc: "Um fim de semana só dos dois, longe de tudo (e de todos).", preco: 900 },
   { emoji: "✈️", nome: "Passagem pra lua de mel", desc: "Uma ajudinha pra chegar mais longe na viagem dos sonhos.", preco: 1050 },
-  { emoji: "🏡", nome: "Tijolinho do ninho novo", desc: "O grand finale: ajuda pra montar a casa do casal com muito amor.", preco: 1200 },
+  { emoji: "💞", nome: "Lua de mel dos sonhos", desc: "O grand finale: um empurrão pra viagem inteira dos sonhos.", preco: 1200 },
 ];
 
 /* ============================================================
@@ -61,7 +62,7 @@ GIFTS.forEach((gift, index) => {
    ============================================================ */
 function updateCountdown() {
   const now = new Date();
-  const diff = WEDDING_DATE - now;
+  const diff = DEADLINE_DATE - now;
 
   const els = {
     dias: document.getElementById("cd-dias"),
