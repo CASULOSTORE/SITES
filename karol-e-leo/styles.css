@@ -630,6 +630,30 @@ p { line-height: 1.6; }
   font-size: 1rem;
 }
 
+.closing__highlight {
+  font-family: 'Playfair Display', serif;
+  color: var(--sky-dark);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.closing__contact {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  margin-top: -4px;
+}
+
+.closing__contact a {
+  color: var(--sky-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.closing__contact a:hover {
+  text-decoration: underline;
+}
+
 /* ===================== GIFTS ===================== */
 .gifts {
   padding: 80px 20px 100px;
@@ -723,13 +747,6 @@ p { line-height: 1.6; }
   font-size: 0.85rem;
   color: var(--ink-light);
   min-height: 56px;
-}
-
-.gift-card__price {
-  font-weight: 700;
-  color: var(--blush);
-  font-size: 1.15rem;
-  margin-top: 4px;
 }
 
 .gift-card__btn {
