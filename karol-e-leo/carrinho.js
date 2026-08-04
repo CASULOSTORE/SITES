@@ -28,7 +28,7 @@ function renderCart() {
     const row = document.createElement("li");
     row.className = "cart-item";
     row.innerHTML = `
-      <span class="cart-item__emoji">${gift.emoji}</span>
+      <img class="cart-item__img" src="${gift.imagem}" alt="${gift.nome}" />
       <div class="cart-item__info">
         <strong>${gift.nome}</strong>
         <span>${item.qty > 1 ? `${item.qty}× ` : ""}${formatBRL(gift.preco)}</span>

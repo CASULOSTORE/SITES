@@ -2,7 +2,6 @@
    RENDERIZAÇÃO DA LOJINHA DE PRESENTES
    ============================================================ */
 const gridEl = document.getElementById("gifts-grid");
-const TILE_CLASSES = ["tile--a", "tile--b", "tile--c"];
 
 function formatBRL(valor) {
   return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
@@ -12,8 +11,9 @@ GIFTS.forEach((gift, index) => {
   const card = document.createElement("article");
   card.className = "gift-card";
   card.innerHTML = `
-    <div class="gift-card__visual ${TILE_CLASSES[index % TILE_CLASSES.length]}">
-      <span class="gift-card__emoji">${gift.emoji}</span>
+    <div class="gift-card__visual">
+      <img class="gift-card__img" src="${gift.imagem}" alt="${gift.nome}" loading="lazy" />
+      <span class="gift-card__badge" aria-hidden="true">${gift.emoji}</span>
       <p class="gift-card__caption">${gift.legenda}</p>
     </div>
     <div class="gift-card__body">
