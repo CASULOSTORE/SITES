@@ -749,6 +749,13 @@ p { line-height: 1.6; }
   min-height: 56px;
 }
 
+.gift-card__price {
+  font-weight: 700;
+  color: var(--blush);
+  font-size: 1.15rem;
+  margin-top: 4px;
+}
+
 .gift-card__btn {
   margin-top: 8px;
   background: var(--mint);
