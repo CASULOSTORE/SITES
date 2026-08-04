@@ -33,7 +33,7 @@ gridEl.addEventListener("click", (e) => {
   addToCart(Number(btn.dataset.index));
 
   const textoOriginal = btn.textContent;
-  btn.textContent = "Adicionado ✓";
+  btn.textContent = "Adicionado";
   btn.classList.add("gift-card__btn--added");
   setTimeout(() => {
     btn.textContent = textoOriginal;
