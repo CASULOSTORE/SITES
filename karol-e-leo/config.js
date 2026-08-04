@@ -7,7 +7,7 @@
 const EVENT_DATE = new Date("2026-08-12T12:00:00");
 
 // Prazo final para confirmar presença.
-const RSVP_DEADLINE = new Date("2026-08-04T14:00:00");
+const RSVP_DEADLINE = new Date("2026-08-04T18:00:00");
 
 // Local do almoço.
 const EVENT_PLACE_NAME = "Brotto Restaurante";

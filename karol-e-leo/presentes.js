@@ -25,17 +25,35 @@ GIFTS.forEach((gift, index) => {
   gridEl.appendChild(card);
 });
 
+/* ============================================================
+   MODAL: PRESENTE ADICIONADO
+   ============================================================ */
+const addedModal = document.getElementById("added-modal");
+
+function abrirAddedModal(gift) {
+  document.getElementById("added-modal-title").textContent = gift.nome;
+  addedModal.classList.add("modal--open");
+  addedModal.setAttribute("aria-hidden", "false");
+}
+
+function fecharAddedModal() {
+  addedModal.classList.remove("modal--open");
+  addedModal.setAttribute("aria-hidden", "true");
+}
+
+addedModal.querySelectorAll("[data-close]").forEach((el) => {
+  el.addEventListener("click", fecharAddedModal);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") fecharAddedModal();
+});
+
 gridEl.addEventListener("click", (e) => {
   const btn = e.target.closest(".gift-card__btn");
   if (!btn) return;
 
+  const gift = GIFTS[Number(btn.dataset.index)];
   addToCart(Number(btn.dataset.index));
-
-  const textoOriginal = btn.textContent;
-  btn.textContent = "Adicionado";
-  btn.classList.add("gift-card__btn--added");
-  setTimeout(() => {
-    btn.textContent = textoOriginal;
-    btn.classList.remove("gift-card__btn--added");
-  }, 1200);
+  abrirAddedModal(gift);
 });
