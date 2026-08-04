@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karol & Léo | Lista de Presentes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="hero__overlay">
+      <p class="hero__eyebrow">Vamos nos casar!</p>
+      <h1 class="hero__names">Karol <span class="hero__amp">&amp;</span> Léo</h1>
+      <p class="hero__date"><!-- EDITAR: data do casamento --> 00 de Mês de 2026</p>
+
+      <div id="countdown" class="countdown">
+        <div class="countdown__box"><span id="cd-dias">00</span><small>dias</small></div>
+        <div class="countdown__box"><span id="cd-horas">00</span><small>horas</small></div>
+        <div class="countdown__box"><span id="cd-min">00</span><small>min</small></div>
+        <div class="countdown__box"><span id="cd-seg">00</span><small>seg</small></div>
+      </div>
+
+      <a href="#presentes" class="btn btn--ghost">Ver lista de presentes ↓</a>
+    </div>
+  </header>
+
+  <!-- ===================== HISTÓRIA / RECADO ===================== -->
+  <section class="story">
+    <div class="story__content">
+      <h2>Um recado do casal 💌</h2>
+      <p>
+        <!-- EDITAR: texto carinhoso do casal --->
+        Depois de anos rindo juntos (e discutindo sobre qual série assistir),
+        decidimos que é hora de dizer "sim". Vamos casar e, mais do que
+        presentes, queremos a companhia de quem a gente ama nesse dia.
+        Se você quiser nos ajudar a começar essa nova fase com o pé direito
+        (e o coração cheio), preparamos essa listinha bem-humorada de
+        "presentes" — na real, é tudo Pix, mas ilustrado pra ficar mais
+        gostoso de escolher. 😄
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== LISTA DE PRESENTES ===================== -->
+  <section id="presentes" class="gifts">
+    <h2 class="gifts__title">Escolha um presente</h2>
+    <p class="gifts__subtitle">
+      São ilustrativos, viu? 100% do valor vai direto pra vida a dois via Pix. 🐷💸
+    </p>
+
+    <div class="gifts__grid" id="gifts-grid">
+      <!-- Os cards são renderizados via JS a partir da lista em script.js -->
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="footer">
+    <p>Com carinho, Karol &amp; Léo 💍</p>
+    <p class="footer__small">Feito com amor (e um pouquinho de código) para o nosso grande dia.</p>
+  </footer>
+
+  <!-- ===================== MODAL DE PRESENTE ===================== -->
+  <div class="modal" id="gift-modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" data-close aria-label="Fechar">&times;</button>
+
+      <div class="modal__gift">
+        <span class="modal__emoji" id="modal-emoji">🎁</span>
+        <h3 id="modal-title">Nome do presente</h3>
+        <p id="modal-desc" class="modal__desc"></p>
+        <p class="modal__price" id="modal-price">R$ 0</p>
+      </div>
+
+      <div class="modal__step" id="step-form">
+        <label class="field">
+          Seu nome
+          <input type="text" id="input-nome" placeholder="Ex: Tia Marlene" />
+        </label>
+        <label class="field">
+          Mensagem para o casal (opcional)
+          <textarea id="input-mensagem" rows="2" placeholder="Deixe um recadinho fofo... ou engraçado 😄"></textarea>
+        </label>
+        <button class="btn btn--primary" id="btn-ir-pix">Presentear via Pix →</button>
+      </div>
+
+      <div class="modal__step modal__step--hidden" id="step-pix">
+        <p class="pix__intro">Chave Pix para pagamento:</p>
+
+        <div class="pix__qrcode">
+          <img id="pix-qr-img" src="" alt="QR Code Pix" />
+        </div>
+
+        <div class="pix__key-box">
+          <span id="pix-key-text"><!-- preenchido via JS --></span>
+          <button class="btn btn--small" id="btn-copiar-pix">Copiar</button>
+        </div>
+        <p class="pix__hint">
+          Abra o app do seu banco → Pix → Pix Copia e Cola (ou aponte a câmera para o QR Code).
+        </p>
+
+        <button class="btn btn--primary" id="btn-confirmar">Já presenteei! 🎉</button>
+        <button class="btn btn--link" id="btn-voltar">← voltar</button>
+      </div>
+
+      <div class="modal__step modal__step--hidden" id="step-obrigado">
+        <div class="obrigado">
+          <span class="obrigado__emoji">💖</span>
+          <h3>Muito obrigado, <span id="obrigado-nome">amigo(a)</span>!</h3>
+          <p>Seu carinho já está fazendo parte da nossa nova casa (ou da nossa lua de mel 😉).</p>
+          <button class="btn btn--primary" data-close>Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
