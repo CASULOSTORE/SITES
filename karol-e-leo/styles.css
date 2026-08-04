@@ -191,7 +191,8 @@ p { line-height: 1.6; }
   gap: 18px;
 }
 
-.hero__monogram {
+.hero__monogram,
+.closing__monogram {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
   letter-spacing: 0.05em;
@@ -205,7 +206,8 @@ p { line-height: 1.6; }
   justify-content: center;
 }
 
-.hero__monogram span {
+.hero__monogram span,
+.closing__monogram span {
   color: var(--blush);
   font-size: 0.8rem;
   margin: 0 2px;
@@ -603,6 +605,36 @@ p { line-height: 1.6; }
 .presentes-teaser p {
   color: var(--ink-light);
   margin-bottom: 26px;
+}
+
+/* ===================== AGRADECIMENTO ===================== */
+.closing {
+  padding: 90px 20px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(95,155,199,0.12), transparent 45%),
+    radial-gradient(circle at 70% 80%, rgba(224,135,158,0.12), transparent 45%),
+    linear-gradient(160deg, var(--paper-dark) 0%, var(--paper) 100%);
+}
+
+.closing__content {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.closing__content h2 {
+  color: var(--sky-dark);
+  font-size: 1.8rem;
+  text-wrap: balance;
+}
+
+.closing__content p {
+  color: var(--ink-light);
+  font-size: 1rem;
 }
 
 /* ===================== GIFTS ===================== */
