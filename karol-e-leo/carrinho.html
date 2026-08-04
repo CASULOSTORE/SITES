@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lojinha de Presentes | Karol & Léo</title>
+  <title>Carrinho | Karol & Léo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
@@ -13,8 +13,7 @@
   <nav class="site-nav">
     <a class="site-nav__brand" href="index.html">Karol <span>&amp;</span> Léo</a>
     <div class="site-nav__links">
-      <a href="index.html#historia">Nossa história</a>
-      <a href="index.html">Início</a>
+      <a href="presentes.html">Presentes</a>
       <a href="confirmar.html" class="btn btn--nav">Confirmar presença</a>
       <a href="carrinho.html" class="cart-link" aria-label="Carrinho de presentes">
         🛍️<span class="cart-badge" id="cart-badge" hidden>0</span>
@@ -22,19 +21,26 @@
     </div>
   </nav>
 
-  <!-- ===================== LISTA DE PRESENTES ===================== -->
-  <section id="presentes" class="gifts gifts--page">
-    <h2 class="gifts__title">Escolha um presente</h2>
-    <p class="gifts__subtitle">
-      São ilustrativos, viu? 100% do valor vai direto pra vida a dois. Adicione ao carrinho e pague com Pix ou cartão. 🐷💸
-    </p>
+  <main class="cart-page">
+    <h1 class="cart-page__title">Seu carrinho</h1>
 
-    <div class="gifts__grid" id="gifts-grid">
-      <!-- Os cards são renderizados via JS a partir da lista em gifts-data.js -->
+    <div class="cart-empty" id="cart-empty" hidden>
+      <span class="cart-empty__emoji">🛍️</span>
+      <p>Ainda não tem nenhum presente por aqui.</p>
+      <a href="presentes.html" class="btn btn--primary">Ver lista de presentes</a>
     </div>
-  </section>
 
-  <!-- ===================== RODAPÉ ===================== -->
+    <ul class="cart-list" id="cart-list"></ul>
+
+    <div class="cart-summary" id="cart-summary" hidden>
+      <div class="cart-summary__total">
+        <span>Total</span>
+        <span id="cart-total">R$ 0</span>
+      </div>
+      <a href="pagamento.html" class="btn btn--primary btn--block">Finalizar e ir pro pagamento</a>
+    </div>
+  </main>
+
   <footer class="footer">
     <div class="footer__links">
       <a href="index.html">Início</a>
@@ -47,6 +53,6 @@
 
   <script src="gifts-data.js"></script>
   <script src="cart.js"></script>
-  <script src="presentes.js"></script>
+  <script src="carrinho.js"></script>
 </body>
 </html>

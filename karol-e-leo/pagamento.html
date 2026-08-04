@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagamento | Karol & Léo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="site-nav site-nav--simple">
+    <a class="site-nav__brand" href="index.html">Karol <span>&amp;</span> Léo</a>
+    <a class="site-nav__back" href="carrinho.html">← Carrinho</a>
+  </nav>
+
+  <main class="payment-page">
+    <h1 class="payment-page__title">Pagamento</h1>
+
+    <div class="cart-empty" id="payment-empty" hidden>
+      <span class="cart-empty__emoji">🛍️</span>
+      <p>Seu carrinho está vazio.</p>
+      <a href="presentes.html" class="btn btn--primary">Ver lista de presentes</a>
+    </div>
+
+    <div id="payment-content">
+      <div class="payment-summary">
+        <h2>Seu pedido</h2>
+        <ul id="payment-summary-list"></ul>
+        <div class="payment-summary__total">
+          <span>Total</span>
+          <span id="payment-summary-total">R$ 0</span>
+        </div>
+      </div>
+
+      <div id="payment-step-form">
+        <form id="payment-form" class="payment-form">
+          <label class="field">Nome completo
+            <input type="text" id="pay-nome" required placeholder="Seu nome" />
+          </label>
+          <label class="field">Telefone
+            <input type="tel" id="pay-telefone" required placeholder="(82) 99999-9999" />
+          </label>
+          <label class="field">E-mail
+            <input type="email" id="pay-email" required placeholder="voce@email.com" />
+          </label>
+          <label class="field">Mensagem para os noivos (opcional)
+            <textarea id="pay-mensagem" rows="3" placeholder="Deixe um recadinho pro casal 💌"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary btn--block">Pagar com InfinitePay</button>
+          <p class="payment-hint">Você será direcionado pro InfinitePay pra pagar via Pix ou cartão de crédito.</p>
+        </form>
+      </div>
+
+      <div class="payment-done" id="payment-step-done" hidden>
+        <span class="payment-done__emoji">🎁</span>
+        <h2>Quase lá!</h2>
+        <p>
+          Abrimos o InfinitePay em outra aba — é só concluir o pagamento
+          de <strong id="payment-done-total">R$ 0</strong> por lá (Pix ou
+          cartão).
+        </p>
+        <div class="payment-done__actions">
+          <button class="btn btn--ghost" id="btn-avisar-whatsapp">Avisar Karol e Léo no WhatsApp</button>
+          <a href="index.html" class="btn btn--link">Voltar ao início</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__links">
+      <a href="index.html">Início</a>
+      <a href="presentes.html">Presentes</a>
+      <a href="confirmar.html">Confirmar presença</a>
+    </div>
+    <p>Com carinho, Karol &amp; Léo 💍</p>
+    <p class="footer__small">Feito com amor (e um pouquinho de código) para o nosso grande dia.</p>
+  </footer>
+
+  <script src="gifts-data.js"></script>
+  <script src="cart.js"></script>
+  <script src="config.js"></script>
+  <script src="pagamento.js"></script>
+</body>
+</html>

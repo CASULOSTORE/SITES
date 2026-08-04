@@ -1,6 +1,6 @@
 /* ============================================================
    CONFIGURAÇÕES DO CASAL — EDITE AQUI
-   Compartilhado por index.html, confirmar.html e presentes.html.
+   Compartilhado por todas as páginas do site.
    ============================================================ */
 
 // Data e hora do almoço (contagem regressiva na página inicial).
@@ -13,12 +13,11 @@ const RSVP_DEADLINE = new Date("2026-08-04T14:00:00");
 const EVENT_PLACE_NAME = "Brotto Restaurante";
 const EVENT_ADDRESS = "R. Sá e Albuquerque, 468 - Jaraguá, Maceió/AL";
 
-// EDITAR: número de WhatsApp do casal (com DDI+DDD, só números) que vai
-// receber as confirmações de presença enviadas em confirmar.html.
-const WHATSAPP_NUMBER = "5582900000000";
+// WhatsApp da Karol (recebe as confirmações de presença e o aviso de
+// pedido de presente), com DDI+DDD, só números.
+const WHATSAPP_NUMBER = "5582999494414";
 
-// EDITAR: chave Pix real do casal (CPF, celular, e-mail ou chave aleatória)
-const PIX_KEY = "chave-pix-do-casal@exemplo.com";
-
-// EDITAR: nome que aparece para quem vai pagar (recebedor do Pix)
-const PIX_NOME_RECEBEDOR = "Karol e Léo";
+// EDITAR: link de pagamento do InfinitePay do casal (valor livre), pra
+// onde o convidado é levado depois de preencher os dados na página de
+// pagamento. Crie o link no painel InfinitePay (aceita Pix e cartão).
+const INFINITEPAY_LINK = "https://pay.infinitepay.io/karol-e-leo";
