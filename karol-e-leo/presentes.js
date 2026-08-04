@@ -13,7 +13,6 @@ GIFTS.forEach((gift, index) => {
   card.innerHTML = `
     <div class="gift-card__visual">
       <img class="gift-card__img" src="${gift.imagem}" alt="${gift.nome}" loading="lazy" />
-      <span class="gift-card__badge" aria-hidden="true">${gift.emoji}</span>
       <p class="gift-card__caption">${gift.legenda}</p>
     </div>
     <div class="gift-card__body">

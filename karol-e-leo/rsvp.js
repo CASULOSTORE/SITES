@@ -13,7 +13,7 @@ rsvpForm.addEventListener("submit", (e) => {
   const mensagem = document.getElementById("rsvp-mensagem").value.trim();
   if (!nome) return;
 
-  let texto = `Confirmando presença no almoço de Karol e Léo 🎉\n\nNome: ${nome}`;
+  let texto = `Confirmando presença no almoço de Karol e Léo.\n\nNome: ${nome}`;
   if (mensagem) texto += `\nMensagem: ${mensagem}`;
 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`;

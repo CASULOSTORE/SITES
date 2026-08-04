@@ -680,22 +680,6 @@ p { line-height: 1.6; }
   display: block;
 }
 
-.gift-card__badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--white);
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.05rem;
-  line-height: 1;
-}
-
 .gift-card__caption {
   position: absolute;
   left: 0;
@@ -842,7 +826,6 @@ p { line-height: 1.6; }
   color: var(--ink-light);
 }
 
-.rsvp__obrigado-emoji { font-size: 3rem; }
 
 .field {
   display: flex;
@@ -895,7 +878,6 @@ p { line-height: 1.6; }
   gap: 18px;
 }
 
-.cart-empty__emoji { font-size: 2.6rem; }
 
 .cart-list {
   list-style: none;
@@ -1063,7 +1045,6 @@ p { line-height: 1.6; }
   gap: 14px;
 }
 
-.payment-done__emoji { font-size: 3rem; }
 
 .payment-done h2 { color: var(--sky-dark); font-size: 1.4rem; }
 .payment-done p { color: var(--ink-light); }

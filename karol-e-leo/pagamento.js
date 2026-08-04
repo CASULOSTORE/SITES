@@ -29,7 +29,7 @@ if (cart.length === 0) {
   cart.forEach((item) => {
     const gift = GIFTS[item.index];
     const li = document.createElement("li");
-    li.innerHTML = `<span>${item.qty > 1 ? `${item.qty}× ` : ""}${gift.emoji} ${gift.nome}</span><span>${formatBRL(gift.preco * item.qty)}</span>`;
+    li.innerHTML = `<span>${item.qty > 1 ? `${item.qty}× ` : ""}${gift.nome}</span><span>${formatBRL(gift.preco * item.qty)}</span>`;
     summaryListEl.appendChild(li);
     linhas.push(`${item.qty > 1 ? `${item.qty}x ` : ""}${gift.nome} (${formatBRL(gift.preco * item.qty)})`);
   });
@@ -51,7 +51,7 @@ if (cart.length === 0) {
     window.open(INFINITEPAY_LINK, "_blank", "noopener");
 
     whatsappBtn.onclick = () => {
-      let texto = `Oi Karol! Presenteei vocês 🎁\n\nPresentes: ${pedidoResumoTexto}\nTotal: ${formatBRL(total)}\nNome: ${nome}\nTelefone: ${telefone}\nE-mail: ${email}`;
+      let texto = `Oi Karol! Presenteei vocês.\n\nPresentes: ${pedidoResumoTexto}\nTotal: ${formatBRL(total)}\nNome: ${nome}\nTelefone: ${telefone}\nE-mail: ${email}`;
       if (mensagem) texto += `\nMensagem: ${mensagem}`;
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`, "_blank", "noopener");
     };
