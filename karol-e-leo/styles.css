@@ -805,62 +805,6 @@ p { line-height: 1.6; }
 .footer p { margin: 4px 0; }
 .footer__small { font-size: 0.8rem; opacity: 0.8; }
 
-/* ===================== CONFIRMAR PRESENÇA ===================== */
-.rsvp {
-  min-height: 78vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 20px 80px;
-  background: linear-gradient(160deg, var(--paper) 0%, var(--paper-dark) 100%);
-}
-
-.rsvp__card {
-  background: var(--white);
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  padding: 44px 36px;
-  max-width: 480px;
-  width: 100%;
-  text-align: center;
-}
-
-.rsvp__card h1 {
-  color: var(--sky-dark);
-  font-size: 1.9rem;
-  margin-bottom: 14px;
-  text-wrap: balance;
-}
-
-.rsvp__lead {
-  color: var(--ink-light);
-  margin-bottom: 32px;
-}
-
-.rsvp__form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  text-align: left;
-}
-
-.rsvp__obrigado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-
-.rsvp__obrigado h2 {
-  color: var(--sky-dark);
-  font-size: 1.5rem;
-}
-
-.rsvp__obrigado p {
-  color: var(--ink-light);
-}
-
-
 .field {
   display: flex;
   flex-direction: column;
