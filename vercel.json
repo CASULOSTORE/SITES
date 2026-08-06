@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/karol-e-leo/index.html" },
+    { "source": "/(.*)", "destination": "/karol-e-leo/$1" }
+  ]
+}
