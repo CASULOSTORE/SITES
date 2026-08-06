@@ -1,63 +1,70 @@
 :root {
-  /* Paleta clean: azul claro + verde + rosa sobre branco — suave,
-     sem cores fortes, com cada tom cumprindo um papel só seu. */
-  --sky: #5f9bc7;      /* títulos e destaques */
-  --sky-dark: #3f7aa8; /* texto sobre fundo claro / hover de contorno */
-  --blush: #e0879e;    /* preços e detalhes afetivos */
-  --mint: #4fae8a;     /* botões de ação (Presentear) */
-  --mint-dark: #3c8b6d;
-  --paper: #ffffff;
-  --paper-dark: #eef5f8;
-  --ink: #38434c;
-  --ink-light: #7c8791;
-  --white: #ffffff;
-  --radius: 18px;
-  --shadow: 0 10px 30px rgba(56, 67, 76, 0.1);
+  /* Paleta de casamento: marfim quente + verde-floresta + dourado
+     envelhecido + terracota — mais elegante e atemporal que o azul/
+     verde/rosa vivos usados antes. */
+  --sky: #3f4f3a;       /* verde-floresta — títulos e destaques */
+  --sky-dark: #2e3a2a;  /* verde mais escuro — hover / ênfase */
+  --blush: #b8735a;     /* terracota — preços e detalhes afetivos */
+  --mint: #a6823c;      /* dourado envelhecido — botões de ação */
+  --mint-dark: #8c6b2e;
+  --paper: #fbf6ef;
+  --paper-dark: #f1e6d6;
+  --ink: #2b2420;
+  --ink-light: #6e6255;
+  --white: #fffdfa;
+  --radius: 10px;
+  --shadow: 0 10px 30px rgba(43, 36, 32, 0.12);
   font-size: 16px;
+
+  /* Cores literais do dress code (azul claro / verde / rosa) — fixas,
+     não seguem a paleta decorativa acima nem o tema claro/escuro. */
+  --dc-sky: #9db8d9;
+  --dc-green: #93b591;
+  --dc-pink: #e0a9b4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #141b20;
-    --paper-dark: #1b242a;
-    --ink: #eef3f6;
-    --ink-light: #a7b3bc;
-    --white: #1e282e;
-    --sky: #8dc3ea;
-    --sky-dark: #a9d3f0;
-    --blush: #f0a6b8;
-    --mint: #6fd0ac;
-    --mint-dark: #8adcc0;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    --paper: #1c1712;
+    --paper-dark: #241d17;
+    --ink: #f3ece3;
+    --ink-light: #c9bba9;
+    --white: #2a231d;
+    --sky: #8fae86;
+    --sky-dark: #a8c79e;
+    --blush: #d99a82;
+    --mint: #d4af5c;
+    --mint-dark: #e8c77e;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
 }
 
 :root[data-theme="dark"] {
-  --paper: #141b20;
-  --paper-dark: #1b242a;
-  --ink: #eef3f6;
-  --ink-light: #a7b3bc;
-  --white: #1e282e;
-  --sky: #8dc3ea;
-  --sky-dark: #a9d3f0;
-  --blush: #f0a6b8;
-  --mint: #6fd0ac;
-  --mint-dark: #8adcc0;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --paper: #1c1712;
+  --paper-dark: #241d17;
+  --ink: #f3ece3;
+  --ink-light: #c9bba9;
+  --white: #2a231d;
+  --sky: #8fae86;
+  --sky-dark: #a8c79e;
+  --blush: #d99a82;
+  --mint: #d4af5c;
+  --mint-dark: #e8c77e;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 :root[data-theme="light"] {
-  --paper: #ffffff;
-  --paper-dark: #eef5f8;
-  --ink: #38434c;
-  --ink-light: #7c8791;
-  --white: #ffffff;
-  --sky: #5f9bc7;
-  --sky-dark: #3f7aa8;
-  --blush: #e0879e;
-  --mint: #4fae8a;
-  --mint-dark: #3c8b6d;
-  --shadow: 0 10px 30px rgba(56, 67, 76, 0.1);
+  --paper: #fbf6ef;
+  --paper-dark: #f1e6d6;
+  --ink: #2b2420;
+  --ink-light: #6e6255;
+  --white: #fffdfa;
+  --sky: #3f4f3a;
+  --sky-dark: #2e3a2a;
+  --blush: #b8735a;
+  --mint: #a6823c;
+  --mint-dark: #8c6b2e;
+  --shadow: 0 10px 30px rgba(43, 36, 32, 0.12);
 }
 
 * { box-sizing: border-box; }
@@ -70,7 +77,7 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Jost', sans-serif;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
@@ -119,8 +126,10 @@ p { line-height: 1.6; }
 .site-nav__links a:not(.btn) {
   color: var(--ink-light);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .site-nav__links a:not(.btn):hover { color: var(--sky-dark); }
@@ -128,8 +137,10 @@ p { line-height: 1.6; }
 .site-nav__back {
   color: var(--ink-light);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .site-nav__back:hover { color: var(--sky-dark); }
@@ -138,8 +149,10 @@ p { line-height: 1.6; }
   position: relative;
   display: inline-flex;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--ink-light);
 }
 
@@ -171,8 +184,8 @@ p { line-height: 1.6; }
   text-align: center;
   padding: 32px 20px;
   background:
-    radial-gradient(circle at 20% 20%, rgba(95,155,199,0.16), transparent 45%),
-    radial-gradient(circle at 80% 80%, rgba(224,135,158,0.16), transparent 45%),
+    radial-gradient(circle at 20% 20%, rgba(63,79,58,0.14), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(166,130,60,0.14), transparent 45%),
     linear-gradient(160deg, var(--paper) 0%, var(--paper-dark) 100%);
 }
 
@@ -286,11 +299,13 @@ p { line-height: 1.6; }
   display: inline-block;
   border: none;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Jost', sans-serif;
   font-weight: 600;
-  border-radius: 999px;
-  padding: 14px 28px;
-  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  padding: 15px 30px;
+  font-size: 0.82rem;
   text-decoration: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
@@ -308,19 +323,20 @@ p { line-height: 1.6; }
 .btn--primary {
   background: var(--mint);
   color: var(--white);
-  box-shadow: 0 6px 16px rgba(79, 174, 138, 0.35);
+  box-shadow: 0 6px 16px rgba(166, 130, 60, 0.35);
 }
 
 .btn--primary:hover { background: var(--mint-dark); }
 
 .btn--nav {
-  background: var(--mint);
-  color: var(--white);
-  padding: 10px 20px;
-  font-size: 0.85rem;
+  background: transparent;
+  color: var(--mint-dark);
+  border: 1.5px solid var(--mint);
+  padding: 9px 18px;
+  font-size: 0.72rem;
 }
 
-.btn--nav:hover { background: var(--mint-dark); }
+.btn--nav:hover { background: var(--mint); color: var(--white); }
 
 .btn--link {
   background: none;
@@ -507,7 +523,7 @@ p { line-height: 1.6; }
 
 .invite__card {
   background: var(--white);
-  border-radius: 24px;
+  border-radius: 14px;
   box-shadow: var(--shadow);
   padding: 44px 36px;
   max-width: 480px;
@@ -670,8 +686,8 @@ p { line-height: 1.6; }
   padding: 90px 20px;
   text-align: center;
   background:
-    radial-gradient(circle at 30% 20%, rgba(95,155,199,0.12), transparent 45%),
-    radial-gradient(circle at 70% 80%, rgba(224,135,158,0.12), transparent 45%),
+    radial-gradient(circle at 30% 20%, rgba(63,79,58,0.1), transparent 45%),
+    radial-gradient(circle at 70% 80%, rgba(166,130,60,0.1), transparent 45%),
     linear-gradient(160deg, var(--paper-dark) 0%, var(--paper) 100%);
 }
 
@@ -826,11 +842,13 @@ p { line-height: 1.6; }
   background: var(--mint);
   color: var(--white);
   border: none;
-  border-radius: 999px;
-  padding: 10px 22px;
+  border-radius: 2px;
+  padding: 11px 22px;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   min-width: 130px;
   transition: background 0.15s ease;
 }
@@ -875,7 +893,7 @@ p { line-height: 1.6; }
 }
 
 .field input, .field textarea {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Jost', sans-serif;
   border: 1.5px solid var(--paper-dark);
   border-radius: 10px;
   padding: 10px 12px;
@@ -1111,7 +1129,7 @@ p { line-height: 1.6; }
 .modal__card {
   position: relative;
   background: var(--white);
-  border-radius: 24px;
+  border-radius: 14px;
   padding: 36px 30px;
   max-width: 400px;
   width: 100%;

@@ -14,7 +14,6 @@ const EVENT_ADDRESS = "R. Sá e Albuquerque, 468 - Jaraguá, Maceió/AL";
 // DDI+DDD, só números.
 const WHATSAPP_NUMBER = "5582999494414";
 
-// EDITAR: link de pagamento do InfinitePay do casal (valor livre), pra
-// onde o convidado é levado depois de preencher os dados na página de
-// pagamento. Crie o link no painel InfinitePay (aceita Pix e cartão).
-const INFINITEPAY_LINK = "https://pay.infinitepay.io/karol-e-leo";
+// Link de pagamento do Mercado Pago do casal, pra onde o convidado é
+// levado depois de preencher os dados na página de pagamento.
+const MERCADOPAGO_LINK = "https://link.mercadopago.com.br/elkakalves";

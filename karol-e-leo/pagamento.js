@@ -1,5 +1,5 @@
 /* ============================================================
-   PAGAMENTO — resumo do pedido + dados do convidado + InfinitePay
+   PAGAMENTO — resumo do pedido + dados do convidado + Mercado Pago
    ============================================================ */
 function formatBRL(valor) {
   return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
@@ -48,7 +48,7 @@ if (cart.length === 0) {
     const mensagem = document.getElementById("pay-mensagem").value.trim();
     if (!nome || !telefone || !email) return;
 
-    window.open(INFINITEPAY_LINK, "_blank", "noopener");
+    window.open(MERCADOPAGO_LINK, "_blank", "noopener");
 
     whatsappBtn.onclick = () => {
       let texto = `Oi Karol! Presenteei vocês.\n\nPresentes: ${pedidoResumoTexto}\nTotal: ${formatBRL(total)}\nNome: ${nome}\nTelefone: ${telefone}\nE-mail: ${email}`;
