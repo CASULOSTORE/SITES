@@ -12,7 +12,7 @@ const EVENT_ADDRESS = "R. Sá e Albuquerque, 468 - Jaraguá, Maceió/AL";
 
 // WhatsApp da Karol (recebe o aviso de pedido de presente), com
 // DDI+DDD, só números.
-const WHATSAPP_NUMBER = "5582999494414";
+const WHATSAPP_NUMBER = "5582999404414";
 
 // Link de pagamento do Mercado Pago do casal, pra onde o convidado é
 // levado depois de preencher os dados na página de pagamento.
