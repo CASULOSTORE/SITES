@@ -22,50 +22,6 @@
   --dc-pink: #e0a9b4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #1c1712;
-    --paper-dark: #241d17;
-    --ink: #f3ece3;
-    --ink-light: #c9bba9;
-    --white: #2a231d;
-    --sky: #8fae86;
-    --sky-dark: #a8c79e;
-    --blush: #d99a82;
-    --mint: #d4af5c;
-    --mint-dark: #e8c77e;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  }
-}
-
-:root[data-theme="dark"] {
-  --paper: #1c1712;
-  --paper-dark: #241d17;
-  --ink: #f3ece3;
-  --ink-light: #c9bba9;
-  --white: #2a231d;
-  --sky: #8fae86;
-  --sky-dark: #a8c79e;
-  --blush: #d99a82;
-  --mint: #d4af5c;
-  --mint-dark: #e8c77e;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-:root[data-theme="light"] {
-  --paper: #fbf6ef;
-  --paper-dark: #f1e6d6;
-  --ink: #2b2420;
-  --ink-light: #6e6255;
-  --white: #fffdfa;
-  --sky: #3f4f3a;
-  --sky-dark: #2e3a2a;
-  --blush: #b8735a;
-  --mint: #a6823c;
-  --mint-dark: #8c6b2e;
-  --shadow: 0 10px 30px rgba(43, 36, 32, 0.12);
-}
-
 * { box-sizing: border-box; }
 
 /* Garante que o atributo hidden vença qualquer display:flex/block
