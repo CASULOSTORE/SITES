@@ -434,42 +434,73 @@ p { line-height: 1.6; }
 }
 
 .story__narrative {
-  max-width: 620px;
+  max-width: 1020px;
   margin: 0 auto;
   padding: 0 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.story__narrative-photo {
+  margin: 0;
+}
+
+.story__narrative-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.story__narrative-text {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.story__narrative p {
+.story__narrative-text p {
   color: var(--ink-light);
   font-size: 1.02rem;
   line-height: 1.75;
 }
 
-.story__narrative strong {
+.story__narrative-text strong {
   color: var(--ink);
   font-family: 'Playfair Display', serif;
 }
 
+@media (max-width: 700px) {
+  .story__narrative {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .story__narrative-photo {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
 .story__quote-photo {
-  min-height: 42vh;
+  min-height: 68vh;
   background-size: cover;
   background-position: center;
   margin: 56px 0 0;
 }
 
 .story__quote-text {
-  max-width: 640px;
-  margin: 32px auto 0;
+  max-width: 520px;
+  margin: 22px auto 0;
   padding: 0 20px;
   text-align: center;
-  color: var(--ink);
+  color: var(--ink-light);
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 1.3rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.55;
   text-wrap: balance;
 }
 
@@ -530,7 +561,7 @@ p { line-height: 1.6; }
 @media (max-width: 600px) {
   .story__gallery { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   .story__hero, .story__hero-scrim { min-height: 52vh; }
-  .story__quote-photo { min-height: 34vh; }
+  .story__quote-photo { min-height: 46vh; }
   .closing, .closing__scrim { min-height: 46vh; }
 }
 
