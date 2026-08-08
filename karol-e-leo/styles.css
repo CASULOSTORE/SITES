@@ -13,12 +13,6 @@
   --radius: 10px;
   --shadow: 0 10px 30px rgba(43, 36, 32, 0.12);
   font-size: 16px;
-
-  /* Cores literais do dress code (azul claro / verde / rosa) — fixas,
-     não seguem a paleta decorativa acima nem o tema claro/escuro. */
-  --dc-sky: #9db8d9;
-  --dc-green: #93b591;
-  --dc-pink: #e0a9b4;
 }
 
 * { box-sizing: border-box; }
@@ -653,6 +647,12 @@ p { line-height: 1.6; }
 .dresscode__lead {
   color: var(--ink-light);
   font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+.dresscode__note {
+  color: var(--ink-light);
+  font-size: 0.9rem;
   margin-bottom: 40px;
 }
 
