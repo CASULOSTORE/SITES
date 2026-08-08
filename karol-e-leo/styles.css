@@ -477,8 +477,6 @@ p { line-height: 1.6; }
   padding: 0 20px;
   text-align: center;
   color: var(--ink-light);
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
   font-size: 1rem;
   line-height: 1.55;
   text-wrap: balance;
@@ -495,8 +493,6 @@ p { line-height: 1.6; }
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
   font-size: 1.15rem;
   color: var(--sky-dark);
   text-wrap: balance;
