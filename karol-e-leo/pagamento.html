@@ -34,6 +34,29 @@
       </div>
 
       <div id="payment-step-form">
+        <div class="payment-methods">
+          <p class="payment-methods__label">Forma de pagamento</p>
+          <div class="payment-methods__options">
+            <label class="payment-method">
+              <input type="radio" name="payment-method" value="pix" checked />
+              <span>Pix</span>
+            </label>
+            <label class="payment-method">
+              <input type="radio" name="payment-method" value="mercadopago" />
+              <span>Mercado Pago</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="pix-box" id="pix-box">
+          <p class="pix-box__label">Chave Pix (e-mail)</p>
+          <div class="pix-box__key">
+            <code id="pix-key-value"></code>
+            <button type="button" class="btn btn--ghost btn--small" id="btn-copy-pix">Copiar</button>
+          </div>
+          <p class="payment-hint">Pague o valor total pelo app do seu banco usando essa chave.</p>
+        </div>
+
         <form id="payment-form" class="payment-form">
           <label class="field">Nome completo
             <input type="text" id="pay-nome" required placeholder="Seu nome" />
@@ -47,18 +70,14 @@
           <label class="field">Mensagem para os noivos (opcional)
             <textarea id="pay-mensagem" rows="3" placeholder="Deixe um recadinho pro casal"></textarea>
           </label>
-          <button type="submit" class="btn btn--primary btn--block">Pagar com Mercado Pago</button>
-          <p class="payment-hint">Você será direcionado pro Mercado Pago pra pagar via Pix ou cartão de crédito.</p>
+          <button type="submit" class="btn btn--primary btn--block" id="payment-submit-btn">Já fiz o Pix</button>
+          <p class="payment-hint" id="payment-submit-hint">Depois de pagar, confirme aqui pra gente saber do seu presente.</p>
         </form>
       </div>
 
       <div class="payment-done" id="payment-step-done" hidden>
-        <h2>Quase lá!</h2>
-        <p>
-          Abrimos o Mercado Pago em outra aba — é só concluir o pagamento
-          de <strong id="payment-done-total">R$ 0</strong> por lá (Pix ou
-          cartão).
-        </p>
+        <h2 id="payment-done-title">Obrigado!</h2>
+        <p id="payment-done-text"></p>
         <div class="payment-done__actions">
           <button class="btn btn--ghost" id="btn-avisar-whatsapp">Avisar Karol e Léo no WhatsApp</button>
           <a href="index.html" class="btn btn--link">Voltar ao início</a>

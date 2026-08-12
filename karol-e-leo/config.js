@@ -17,3 +17,7 @@ const WHATSAPP_NUMBER = "5582999404414";
 // Link de pagamento do Mercado Pago do casal, pra onde o convidado é
 // levado depois de preencher os dados na página de pagamento.
 const MERCADOPAGO_LINK = "https://link.mercadopago.com.br/elkakalves";
+
+// Chave Pix do casal (e-mail), mostrada como forma de pagamento
+// alternativa na página de pagamento.
+const PIX_KEY = "eas.karollyne@gmail.com";
